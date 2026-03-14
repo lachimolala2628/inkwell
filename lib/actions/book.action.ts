@@ -84,6 +84,28 @@ export const createBook = async (data: CreateBook) => {
     }
 };
 
+export const getBookBySlug = async (slug: string) => {
+    try {
+        await connectToDatabase();
+
+        const book = await Book.findOne({ slug }).lean();
+
+        if (!book) {
+            return { success: false, error: 'Book not found' };
+        }
+
+        return {
+            success: true,
+            data: serializeData<IBook>(book as unknown as IBook),
+        }
+    } catch (error) {
+        console.error('Error fetching book by slug', error);
+        return {
+            success: false, error: error
+        }
+    }
+};
+
 export const saveBookSegments = async (bookId: string, clerkId: string, segments: TextSegment[]) => {
     try {
         await connectToDatabase();
