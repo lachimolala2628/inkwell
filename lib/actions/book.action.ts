@@ -71,6 +71,22 @@ export const createBook = async (data: CreateBook) => {
             }
         };
 
+        const { getUserPlan } = await import("@/lib/subscription.server");
+        const { PLAN_LIMITS } = await import("@/lib/subscription-constants");
+
+        const plan = await getUserPlan();
+        const limits = PLAN_LIMITS[plan];
+
+        const bookCount = await Book.countDocuments({ clerkId: data.clerkId });
+
+        if (bookCount >= limits.maxBooks) {
+            return {
+                success: false,
+                error: `You have reached the maximum number of books allowed for your ${plan} plan (${limits.maxBooks}). Please upgrade to add more books.`,
+                isBillingError: true,
+            };
+        }
+
         const book = await Book.create({ ...data, slug, totalSegments: 0 });
         revalidatePath('/');
 
