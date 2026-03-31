@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Inkwell – AI Voice Reading Platform
 
-## Getting Started
+**Inkwell** is an AI-powered platform that enables **real-time voice conversations with your books**.  
 
-First, run the development server:
+Built with **Next.js 16**, **Vapi**, and **MongoDB**, Inkwell transforms PDFs into **interactive, voice-enabled entities** using advanced AI and natural voice synthesis.  
+
+Users can choose from custom **ElevenLabs personas**, engage in conversations, request summaries, and view live transcripts — all within a sleek, modern UI powered by **Shadcn UI** and secured with **Clerk authentication**.
+
+---
+
+## 🚀 Features
+
+- 📄 **PDF Upload & Ingestion**  
+  Upload and process books into interactive AI-driven content.
+
+- 🎙 **Voice-First Conversations**  
+  Talk to your books in real-time using natural voice interaction.
+
+- 🧠 **AI Voice Personas**  
+  Choose from multiple **ElevenLabs voices** for a personalized experience.
+
+- 📊 **Smart Summaries & Insights**  
+  Instantly generate summaries and extract key ideas.
+
+- 📝 **Session Transcripts**  
+  View and revisit conversations with real-time transcripts.
+
+- 📚 **Library Management**  
+  Organize and manage your uploaded books efficiently.
+
+- 🔐 **Authentication & Subscription**  
+  Secure user management with Clerk and subscription-ready architecture.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js 16  
+- TypeScript  
+- Tailwind CSS  
+- Shadcn UI  
+
+### Backend & Services
+- MongoDB  
+- Vapi (Voice AI)  
+- ElevenLabs (Voice Synthesis)  
+- Clerk (Authentication & User Management)  
+
+---
+
+## 📦 Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/lachimolala2628/inkwell.git
+npm install
+```
+## 🛠️ Usage
+
+- Navigate to the project directory
+
+```bash 
+cd inkwell
+```
+
+- Install dependencies
+
+```bash
+npm install
+```
+
+- Configure Environment Variables
+
+Create a .env file and add necessary API keys and configuration:
+
+```bash
+#Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=YOUR_NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+CLERK_SECRET_KEY=YOUR_CLERK_SECRET_KEY
+
+#Database
+MONGODB_URI=YOUR_MONGODB_URI
+
+#Vercel-storage
+BLOB_READ_WRITE_TOKEN=YOUR_BLOB_READ_WRITE_TOKEN
+
+#Vapi
+NEXT_PUBLIC_ASSISTANT_ID=YOUR_NEXT_PUBLIC_ASSISTANT_ID
+NEXT_PUBLIC_VAPI_API_KEY=YOUR_NEXT_PUBLIC_VAPI_API_KEY
+```
+
+- Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Visit
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 👋🏻 Author
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Ayush Kumar**
+Frontend Developer with a focus on clean, scalable, and reliable web applications.
