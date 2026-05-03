@@ -26,7 +26,7 @@ const BooksDetailsPage = async ({ params }: { params: Promise<{ slug: string }> 
     return (
         <div className='book-page-container'>
             <Link href='/' className='back-btn-floating'>
-                <ArrowLeft className='size-6 text-[#212a3b]' />
+                <ArrowLeft className='size-6 text-[#D4D4D4]' />
             </Link>
 
             <VapiControls book={book} />

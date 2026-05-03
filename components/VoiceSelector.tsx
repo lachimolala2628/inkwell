@@ -16,7 +16,6 @@ const VoiceSelector = ({ value, onChange, disabled, className }: VoiceSelectorPr
                 disabled={disabled}
                 className="space-y-8"
             >
-                {/* Male Voices */}
                 <div className="space-y-4">
                     <h4 className="text-sm font-medium text-[#777]">Male Voices</h4>
                     <div className="voice-selector-options">
@@ -37,13 +36,13 @@ const VoiceSelector = ({ value, onChange, disabled, className }: VoiceSelectorPr
                                         <div className="flex items-center gap-2">
                                             <div className={cn(
                                                 "w-4 h-4 rounded-full border flex items-center justify-center",
-                                                isSelected ? "border-[#663820]" : "border-gray-300"
+                                                isSelected ? "border-white" : "border-gray-300"
                                             )}>
-                                                {isSelected && <div className="w-2 h-2 rounded-full bg-[#663820]" />}
+                                                {isSelected && <div className="w-2 h-2 rounded-full bg-white" />}
                                             </div>
-                                            <span className="font-bold text-[#212a3b]">{voice.name}</span>
+                                            <span className="font-bold text-white">{voice.name}</span>
                                         </div>
-                                        <p className="text-xs text-[#777] leading-relaxed">
+                                        <p className="text-xs mt-0.5 text-[#777] leading-relaxed">
                                             {voice.description}
                                         </p>
                                     </div>
@@ -51,12 +50,9 @@ const VoiceSelector = ({ value, onChange, disabled, className }: VoiceSelectorPr
                             );
                         })}
                     </div>
-                </div>
 
-                {/* Female Voices */}
-                <div className="space-y-4">
-                    <h4 className="text-sm font-medium text-[#777]">Female Voices</h4>
                     <div className="voice-selector-options">
+                        <h4 className="text-sm font-medium text-[#777]">Female Voices</h4>
                         {voiceCategories.female.map((voiceId) => {
                             const voice = voiceOptions[voiceId as keyof typeof voiceOptions];
                             const isSelected = value === voiceId;
@@ -74,13 +70,13 @@ const VoiceSelector = ({ value, onChange, disabled, className }: VoiceSelectorPr
                                         <div className="flex items-center gap-2">
                                             <div className={cn(
                                                 "w-4 h-4 rounded-full border flex items-center justify-center",
-                                                isSelected ? "border-[#663820]" : "border-gray-300"
+                                                isSelected ? "border-white" : "border-gray-300"
                                             )}>
-                                                {isSelected && <div className="w-2 h-2 rounded-full bg-[#663820]" />}
+                                                {isSelected && <div className="w-2 h-2 rounded-full bg-white" />}
                                             </div>
-                                            <span className="font-bold text-[#212a3b]">{voice.name}</span>
+                                            <span className="font-bold text-white">{voice.name}</span>
                                         </div>
-                                        <p className="text-xs text-[#777] leading-relaxed">
+                                        <p className="text-xs mt-0.5 text-[#777] leading-relaxed">
                                             {voice.description}
                                         </p>
                                     </div>
