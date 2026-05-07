@@ -79,10 +79,10 @@ const VapiControls = ({ book }: { book: IBook }) => {
                 </div>
                 <div className="flex flex-col gap-4 flex-1">
                     <div>
-                        <h1 className="text-2xl sm:text-3xl font-bold font-serif text-white mb-1">
+                        <h1 className="text-2xl sm:text-3xl font-bold font-serif text-(--text-primary) mb-1">
                             {book.title}
                         </h1>
-                        <p className="text-white font-medium">by {book.author}</p>
+                        <p className="text-(--text-primary) font-medium">by {book.author}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-3">

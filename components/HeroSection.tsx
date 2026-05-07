@@ -1,74 +1,38 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const HeroSection = () => {
     return (
         <section className="wrapper pt-10 mb-10 md:mb-16">
-            <div className="library-hero-card">
-                <div className="library-hero-content">
-                    {/* Left Part */}
-                    <div className="library-hero-text">
-                        <h1 className="library-hero-title text-4xl font-serif font-bold">Your Library</h1>
-                        <p className="library-hero-description">
-                            Convert your books into interactive AI conversations. <br className="hidden md:block" />
-                            Listen, learn, and discuss your favorite reads.
-                        </p>
-                        <Link href="/books/new" className="library-cta-primary mt-4 flex items-center justify-center">
-                            <span className="text-3xl font-light mb-1 mr-2">+</span>
-                            <span className="text-[#212a3b]">Add new book</span>
-                        </Link>
-                    </div>
+            <div className="px-4 sm:px-8 py-12 sm:py-16 md:py-24 flex flex-col items-center text-center gap-6">
 
-                    {/* Center Part - Desktop */}
-                    <div className="library-hero-illustration-desktop">
-                        <Image
-                            src="/assets/hero-illustration.png"
-                            alt="Vintage books and a globe"
-                            width={400}
-                            height={400}
-                            className="object-contain"
-                        />
-                    </div>
+                {/* Heading */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-(--text-primary) tracking-tight">
+                    Welcome to Inkwell
+                </h1>
 
-                    {/* Center Part - Mobile (Hidden on Desktop) */}
-                    <div className="library-hero-illustration">
-                        <Image
-                            src="/assets/hero-illustration.png"
-                            alt="Vintage books and a globe"
-                            width={300}
-                            height={300}
-                            className="object-contain"
-                        />
-                    </div>
+                {/* Description */}
+                <p className="text-(--text-secondary) text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-xl">
+                    Where books become conversations. Listen, ask, and explore ideas through immersive AI interactions.
+                </p>
 
-                    {/* Right Part */}
-                    <div className="library-steps-card min-w-[260px] max-w-[280px] z-10 shadow-soft-md">
-                        <ul className="space-y-6">
-                            <li className="library-step-item">
-                                <div className="w-10 h-10 min-w-10 min-h-10 rounded-full border border-gray-300 flex items-center justify-center font-medium text-lg">1</div>
-                                <div className="flex flex-col">
-                                    <h3 className="library-step-title text-lg font-bold">Upload PDF</h3>
-                                    <p className="library-step-description text-gray-500">Add your book file</p>
-                                </div>
-                            </li>
-                            <li className="library-step-item">
-                                <div className="w-10 h-10 min-w-10 min-h-10 rounded-full border border-gray-300 flex items-center justify-center font-medium text-lg">2</div>
-                                <div className="flex flex-col">
-                                    <h3 className="library-step-title text-lg font-bold">AI Processing</h3>
-                                    <p className="library-step-description text-gray-500">We analyze the content</p>
-                                </div>
-                            </li>
-                            <li className="library-step-item">
-                                <div className="w-10 h-10 min-w-10 min-h-10 rounded-full border border-gray-300 flex items-center justify-center font-medium text-lg">3</div>
-                                <div className="flex flex-col">
-                                    <h3 className="library-step-title text-lg font-bold">Voice Chat</h3>
-                                    <p className="library-step-description text-gray-500">Discuss with AI</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                {/* CTA Button */}
+                <Link
+                    href="/books/new"
+                    className="mt-2 inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 rounded-lg font-medium text-sm sm:text-base bg-white hover:bg-[#E5E5E5] transition-all"
+                >
+                    <span className="text-(--bg-primary)">Add new book</span>
+                </Link>
+
+                {/* Steps */}
+                <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-(--text-secondary) text-xs sm:text-sm font-mono mt-2">
+                    <span>Upload PDF</span>
+                    <span>→</span>
+                    <span>AI Processing</span>
+                    <span>→</span>
+                    <span>Voice Chat</span>
                 </div>
+
             </div>
         </section>
     )

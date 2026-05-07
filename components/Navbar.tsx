@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs'
@@ -27,10 +28,11 @@ const Navbar = () => {
     const { user } = useUser();
 
     return (
-        <header className="w-full fixed z-50 bg-[var(--bg-primary)] border-b-2 border-[#1b1b1c]">
+        <header className="w-full fixed z-50 bg-(--bg-primary) border-b border-border">
             <div className="wrapper navbar-height py-4 flex justify-between items-center">
-                <Link href='/' className='flex gap-0.5 items-center'>
-                    <span className='logo-text'>Inkwell</span>
+                <Link href="/" className="flex gap-0.5 items-center">
+                    <Image src="/assets/logo.png" alt="inkwell" width={42} height={26} />
+                    <span className="logo-text">Inkwell</span>
                 </Link>
 
                 <nav className='w-fit flex gap-7.5 items-center'>
