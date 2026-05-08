@@ -8,12 +8,12 @@ const HeroSection = () => {
 
                 {/* Heading */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-(--text-primary) tracking-tight">
-                    Welcome to Inkwell
+                    Every book has more to say
                 </h1>
 
                 {/* Description */}
                 <p className="text-(--text-secondary) text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-xl">
-                    Where books become conversations. Listen, ask, and explore ideas through immersive AI interactions.
+                    Most people read a book once and forget 90% of it. Inkwell lets you have ongoing conversations with any book — so the ideas actually stick.
                 </p>
 
                 {/* CTA Button */}
