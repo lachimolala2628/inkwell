@@ -770,7 +770,7 @@
      UPLOAD FORM COMPONENT
      =========================================== */
   .upload-dropzone {
-    @apply flex flex-col items-center justify-center h-[165px]  rounded-[6px] cursor-pointer transition-all border-2 border-dashed border-[var(--border-medium)];
+    @apply flex flex-col items-center justify-center h-[165px] rounded-[6px] cursor-pointer transition-all border-2 border-dashed border-[var(--border-medium)];
   }
 
   .upload-dropzone-uploaded {
@@ -829,8 +829,8 @@
 
 /* Clerk Auth Button Overrides */
 .cl-formButtonPrimary {
-  border: none !important;
-  box-shadow: var(--shadow-soft) !important;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
   border-radius: 0.75rem !important;
   background-color: #FFFFFF !important;
   color: #08090A !important;
@@ -838,7 +838,7 @@
 
 .cl-formButtonPrimary:hover {
   background-color: #E5E5E5 !important;
-  box-shadow: var(--shadow-soft-md) !important;
+  box-shadow: none !important;
 }
 
 .cl-pricingTableCardDescription {
@@ -865,32 +865,37 @@
 .cl-formFieldInput {
   position: relative !important;
   z-index: 10 !important;
-  border: 1px solid #23252a !important;
-  background-color: #191A1B !important;
-  color: #F7F8F8 !important;
-  box-shadow: var(--shadow-soft-sm) !important;
+  border: 1px solid #E5E5E5 !important;
+  background-color: #FFFFFF !important;
+  color: #08090A !important;
+  box-shadow: none !important;
   border-radius: 0.75rem !important;
 }
 
 .cl-formFieldInput:focus {
-  border-color: #F7F8F8 !important;
-  box-shadow: var(--shadow-soft), 0 0 0 2px rgba(247, 248, 248, 0.1) !important;
+  border-color: #08090A !important;
+  box-shadow: none !important;
 }
 
 /* Clerk Auth Social Buttons */
 .cl-socialButtonsBlockButton,
 .cl-socialButtonsBlockButton__google,
 .cl-socialButtonsBlockButton__facebook {
-  box-shadow: var(--shadow-soft-sm) !important;
+  box-shadow: none !important;
   border-radius: 0.75rem !important;
-  border: 1px solid #23252a !important;
-  background-color: #191A1B !important;
-  color: #F7F8F8 !important;
+  border: 1px solid #E5E5E5 !important;
+  background-color: #FFFFFF !important;
+  color: #08090A !important;
 }
 
 .cl-socialButtonsBlockButton:hover {
-  box-shadow: var(--shadow-soft) !important;
-  background-color: #23252a !important;
+  box-shadow: none !important;
+  background-color: #F5F5F5 !important;
+}
+
+/* Form labels */
+.cl-formFieldLabel {
+  color: #08090A !important;
 }
 
 /* Pricing cards container */
